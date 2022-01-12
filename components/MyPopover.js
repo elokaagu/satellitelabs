@@ -1,12 +1,13 @@
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { Fragment } from "react";
+import MyForm from "./MyForm";
 
 const getInTouch = [
   {
     name: "Contact",
     description: "Get in touch here",
-    href: "##",
+    href: "/contact",
     icon: IconOne,
   },
 ];
