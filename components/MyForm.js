@@ -1,12 +1,43 @@
 import React from "react";
 import Link from "next/link";
 import { XCircleIcon } from "@heroicons/react/solid";
+import { firestore } from "../utils/firebase";
+import { useState } from "react";
 
 export default function MyForm(props) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    firestore
+      .collection("contacts")
+      .add({
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        alert("thank you for your message 💟  ");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
     <div className="relative w-96">
       <div className="relative mt-8">
-        <form className="bg-white shadow-md rounded-md px-8 pt-8 pb-8 mt-4 mb-4 relative">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white shadow-md rounded-md px-8 pt-8 pb-8 mt-4 mb-4 relative"
+        >
           <Link href="/">
             <XCircleIcon
               className="h-9 w-9 mb-4 text-blue-700 absolute right-2 top-2"
@@ -26,6 +57,10 @@ export default function MyForm(props) {
               id="fullname"
               type="text"
               placeholder="Full name"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
             />
           </div>
 
@@ -41,6 +76,10 @@ export default function MyForm(props) {
               id="email"
               type="text"
               placeholder="e.g. hey@satellitelabs.xyz"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
           </div>
 
@@ -57,6 +96,10 @@ export default function MyForm(props) {
               type="message"
               rows={5}
               placeholder="we'd love to hear from you..."
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
             />
           </div>
 
