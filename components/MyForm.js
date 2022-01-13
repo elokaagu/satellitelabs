@@ -12,19 +12,31 @@ export default function MyForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    firestore
-      .collection("contacts")
-      .add({
-        name: name,
-        email: email,
-        message: message,
-      })
-      .then(() => {
-        alert("thank you for your message 💟  ");
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
+    // firestore
+    //   .collection("contacts")
+    //   .add({
+    //     name: name,
+    //     email: email,
+    //     message: message,
+    //   })
+    //   .then(() => {
+    //     alert("thank you for your message 💟  ");
+    //   })
+    //   .catch((error) => {
+    //     alert(error.message);
+    //   });
+
+    const data = {
+      name,
+      email,
+      message,
+    };
+    console.log(data);
+
+    fetch("/api/contact", {
+      method: "post",
+      body: JSON.stringify(data),
+    });
 
     setName("");
     setEmail("");
@@ -106,7 +118,7 @@ export default function MyForm(props) {
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-700 hover:bg-blue-900 text-base font-medium hover:text-opacity-100 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
             >
               <span>Send</span>
             </button>
