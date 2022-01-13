@@ -43,9 +43,16 @@ export default function MyForm(props) {
     setMessage("");
   };
 
+  const handleKeypress = (e) => {
+    if (e.keyCode === 13) {
+      handleSubmit();
+      console.log("it worked");
+    }
+  };
+
   return (
     <div className="relative w-96">
-      <div className="relative mt-8">
+      <div className="relative mt-8 " onKeyPress={handleKeypress}>
         <form
           onSubmit={handleSubmit}
           className="bg-white shadow-md rounded-md px-8 pt-8 pb-8 mt-4 mb-4 relative"
