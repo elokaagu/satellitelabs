@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
-      <main className="bg-gradient-to-tr from-slate-900 to-indigo-800 text-white w-screen h-screen flex justify-center items-center flex-col  ">
+      <main className="bg-gradient-to-tr from-slate-900 to-indigo-800 text-white w-screen h-screen flex justify-center items-center flex-col overflow-hidden">
         <Image
           src={logoPic}
           alt="logoPic"
@@ -20,7 +20,7 @@ export default function Home() {
           height="256"
           className="cursor-pointer"
         />
-        <h1 className="text-3xl font-normal cursor-pointer ">Satellite Beta</h1>
+        <h1 className="text-3xl font-normal cursor-pointer">Satellite Beta</h1>
         <MyPopover />
       </main>
     </div>
