@@ -26,7 +26,7 @@ export default function Home() {
             className="cursor-pointer"
           />
         </Link>
-        <h1 className="text-3xl font-normal cursor-pointer ">Contact</h1>
+        <h1 className="text-3xl font-normal cursor-pointer ">Contact Us</h1>
         <MyForm />
       </main>
     </div>
