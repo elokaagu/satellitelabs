@@ -12,7 +12,6 @@ export default function Home() {
       </Head>
       <Body>
         <h1>Satellite Labs</h1>
-        <h1>Explore</h1>
       </Body>
     </div>
   );
@@ -21,12 +20,20 @@ export default function Home() {
 const Body = styled.div`
   padding: 20px;
   height: 100vh;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
 
   > h1 {
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     padding-bottom: 20px;
     font-family: "Inter Regular";
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
   > p {
