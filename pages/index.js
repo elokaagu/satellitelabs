@@ -26,6 +26,7 @@ const Body = styled.div`
     font-size: 20px;
     color: white;
     padding-bottom: 20px;
+    font-family: "Inter Regular";
   }
 
   > p {
