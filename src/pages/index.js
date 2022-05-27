@@ -53,6 +53,8 @@ export default function Home() {
         </VideoContainer>
         <Overlay>
           <h1>Satellite Labs</h1>
+          {/* <p>Engineering and design studio</p> */}
+          <Dock></Dock>
         </Overlay>
       </Body>
     </div>
@@ -127,3 +129,5 @@ const SocialIcon = styled.div`
   padding: 10px;
   cursor: pointer;
 `;
+
+const Dock = styled.div``;
