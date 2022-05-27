@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import useState from "react";
 import Main from "../components/Main";
 
 export default function Home() {
@@ -15,16 +14,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Body>
-        <h1>Satellite Labs</h1>
-        <Main />
+        {/* <h1>Satellite Labs</h1> */}
+        <video src={require("../assets/videobg.mp4")} autoPlay loop muted />
       </Body>
     </div>
   );
 }
 
 const Body = styled.div`
-  padding: 20px;
   height: 100vh;
+  width: 100vw;
   display: grid;
   align-items: center;
   text-align: center;

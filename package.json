@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@u-wave/react-vimeo": "^0.9.8",
+    "@vimeo/player": "^2.16.4",
     "next": "12.1.6",
     "next-images": "^1.8.4",
     "next-videos": "1.4.0",

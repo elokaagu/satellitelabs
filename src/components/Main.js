@@ -6,7 +6,6 @@ function Main(props) {
   return (
     <div>
       <Body>
-        <h1>Hello Main</h1>
         <video src={require("../assets/videobg.mp4")} autoPlay loop muted />
       </Body>
     </div>
