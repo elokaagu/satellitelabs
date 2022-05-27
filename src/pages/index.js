@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Main from "../components/Main";
 
 export default function Home() {
-  // const [isPlaying, setIsPlaying] = useState(true);
-
   return (
     <div>
       <Head>
@@ -14,8 +12,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Body>
-        {/* <h1>Satellite Labs</h1> */}
-        <video src={require("../assets/videobg.mp4")} autoPlay loop muted />
+        <VideoContainer>
+          <video
+            src={require("../assets/videobg.mp4")}
+            autoPlay
+            loop
+            muted
+            width="100%"
+            height="auto"
+          />
+        </VideoContainer>
+        <Overlay>
+          <h1>Satellite Labs</h1>
+        </Overlay>
       </Body>
     </div>
   );
@@ -45,4 +54,21 @@ const Body = styled.div`
     color: white;
     padding-bottom: 20px;
   }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  text-align: center;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const VideoContainer = styled.div`
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 `;
