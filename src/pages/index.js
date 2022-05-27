@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
 import Main from "../components/Main";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,10 +15,23 @@ export default function Home() {
       <Body>
         <SocialMedia>
           <SocialIcon>
-            <Image src="/instagram.svg" alt="image" height={30} width={30} />
+            <Link href="https://www.instagram.com/elokaagu/">
+              <a target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/instagram.svg"
+                  alt="image"
+                  height={30}
+                  width={30}
+                />
+              </a>
+            </Link>
           </SocialIcon>
           <SocialIcon>
-            <Image src="/twitter.png" alt="image" height={30} width={30} />
+            <Link href="https://twitter.com/ElokaAgu">
+              <a target="_blank" rel="noopener noreferrer">
+                <Image src="/twitter.png" alt="image" height={30} width={30} />
+              </a>
+            </Link>
           </SocialIcon>
         </SocialMedia>
         <VideoContainer>
@@ -93,4 +107,5 @@ const SocialMedia = styled.div`
 
 const SocialIcon = styled.div`
   padding: 10px;
+  cursor: pointer;
 `;
