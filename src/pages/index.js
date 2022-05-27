@@ -12,6 +12,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Body>
+        <SocialMedia>
+          <SocialIcon>
+            <Image src="/instagram.svg" alt="image" height={30} width={30} />
+          </SocialIcon>
+          <SocialIcon>
+            <Image src="/twitter.png" alt="image" height={30} width={30} />
+          </SocialIcon>
+        </SocialMedia>
         <VideoContainer>
           <video
             src={require("../assets/videobg.mp4")}
@@ -63,6 +71,7 @@ const Overlay = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
 `;
 
 const VideoContainer = styled.div`
@@ -71,4 +80,17 @@ const VideoContainer = styled.div`
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+`;
+
+const SocialMedia = styled.div`
+  z-index: 150;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+`;
+
+const SocialIcon = styled.div`
+  padding: 10px;
 `;
