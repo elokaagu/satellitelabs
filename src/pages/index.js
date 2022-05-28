@@ -54,7 +54,44 @@ export default function Home() {
         <Overlay>
           <h1>Satellite Labs</h1>
           {/* <p>Engineering and design studio</p> */}
-          <Dock></Dock>
+          <Dock>
+            <KeakieLogo>
+              <Link href="https://www.keakie.com/discover">
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/KeakieLogo.png"
+                    alt="image"
+                    height={40}
+                    width={40}
+                  />
+                </a>
+              </Link>
+            </KeakieLogo>
+            <KeakieLogo>
+              <Link href="https://customuse.com/">
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/customuse.png"
+                    alt="image"
+                    height={40}
+                    width={40}
+                  />
+                </a>
+              </Link>
+            </KeakieLogo>
+            <KeakieLogo>
+              <Link href="https://www.thenothingness.com/">
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/satellite_logo.png"
+                    alt="image"
+                    height={40}
+                    width={40}
+                  />
+                </a>
+              </Link>
+            </KeakieLogo>
+          </Dock>
         </Overlay>
       </Body>
     </div>
@@ -73,6 +110,7 @@ const Body = styled.div`
     font-size: 30px;
     color: white;
     padding-bottom: 20px;
+
     font-family: "Inter Regular";
 
     :hover {
@@ -130,4 +168,21 @@ const SocialIcon = styled.div`
   cursor: pointer;
 `;
 
-const Dock = styled.div``;
+const Dock = styled.div`
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: rgba(83, 83, 83, 0.1);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  display: flex;
+`;
+
+const KeakieLogo = styled.div`
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 200;
+`;
