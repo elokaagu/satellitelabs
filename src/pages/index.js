@@ -53,46 +53,46 @@ export default function Home() {
         </VideoContainer>
         <Overlay>
           <h1>Satellite Labs</h1>
-          {/* <p>Engineering and design studio</p> */}
-          <Dock>
-            <KeakieLogo>
-              <Link href="https://www.keakie.com/discover">
-                <a target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/KeakieLogo.png"
-                    alt="image"
-                    height={40}
-                    width={40}
-                  />
-                </a>
-              </Link>
-            </KeakieLogo>
-            <KeakieLogo>
-              <Link href="https://customuse.com/">
-                <a target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/customuse.png"
-                    alt="image"
-                    height={40}
-                    width={40}
-                  />
-                </a>
-              </Link>
-            </KeakieLogo>
-            <KeakieLogo>
-              <Link href="https://www.thenothingness.com/">
-                <a target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/satellite_logo.png"
-                    alt="image"
-                    height={40}
-                    width={40}
-                  />
-                </a>
-              </Link>
-            </KeakieLogo>
-          </Dock>
         </Overlay>
+
+        <Dock>
+          <KeakieLogo>
+            <Link href="https://www.keakie.com/discover">
+              <a target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/KeakieLogo.png"
+                  alt="image"
+                  height={40}
+                  width={40}
+                />
+              </a>
+            </Link>
+          </KeakieLogo>
+          <KeakieLogo>
+            <Link href="https://customuse.com/">
+              <a target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/customuse.png"
+                  alt="image"
+                  height={40}
+                  width={40}
+                />
+              </a>
+            </Link>
+          </KeakieLogo>
+          <KeakieLogo>
+            <Link href="https://www.thenothingness.com/">
+              <a target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/satellite_logo.png"
+                  alt="image"
+                  height={40}
+                  width={40}
+                />
+              </a>
+            </Link>
+          </KeakieLogo>
+        </Dock>
       </Body>
     </div>
   );
@@ -132,6 +132,7 @@ const Overlay = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  justify-content: space-between;
   z-index: 100;
 
   > h1 {
@@ -179,6 +180,10 @@ const Dock = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
   cursor: pointer;
   display: flex;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const KeakieLogo = styled.div`
