@@ -93,6 +93,11 @@ export default function Home() {
             </Link>
           </KeakieLogo>
         </Dock>
+        <BottomOverlay>
+          <p>
+            made by <a>@eloka</a>{" "}
+          </p>
+        </BottomOverlay>
       </Body>
     </div>
   );
@@ -137,6 +142,27 @@ const Overlay = styled.div`
 
   > h1 {
     font-size: 30px;
+    color: black;
+    padding-bottom: 20px;
+    font-family: "Inter Regular";
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+`;
+
+const BottomOverlay = styled.div`
+  position: absolute;
+  text-align: center;
+  color: black;
+  top: 95%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  z-index: 100;
+
+  > p {
     color: black;
     padding-bottom: 20px;
     font-family: "Inter Regular";
