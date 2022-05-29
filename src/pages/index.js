@@ -3,6 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import Main from "../components/Main";
 import Link from "next/link";
+import { device } from "../styles/breakpoints";
 
 export default function Home() {
   return (
@@ -56,8 +57,8 @@ export default function Home() {
         </Overlay>
 
         <Dock>
-          <KeakieCircle>
-            <KeakieLogo>
+          <KeakieLogo>
+            <KeakieCircle>
               <Link href="https://www.keakie.com/discover">
                 <a target="_blank" rel="noopener noreferrer">
                   <Image
@@ -68,8 +69,9 @@ export default function Home() {
                   />
                 </a>
               </Link>
-            </KeakieLogo>
-          </KeakieCircle>
+            </KeakieCircle>
+          </KeakieLogo>
+
           <KeakieLogo>
             <Link href="https://customuse.com/">
               <a target="_blank" rel="noopener noreferrer">
@@ -176,6 +178,11 @@ const BottomOverlay = styled.div`
   transform: translate(-50%, -50%);
   justify-content: space-between;
   z-index: 100;
+
+  @media ${device.laptop} {
+    top: 95%;
+    left: 50%;
+  }
 
   > p {
     color: black;
