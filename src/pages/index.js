@@ -244,7 +244,7 @@ const Dock = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     margin-bottom: 20px;
   }
 `;
