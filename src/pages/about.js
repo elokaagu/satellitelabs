@@ -40,7 +40,18 @@ function about(props) {
               free to get in contact via email or dm.
             </p>
           </OverlayText>
-          <OverlayImage></OverlayImage>
+          <OverlayImage>
+            <Image
+              src="/profile.png"
+              alt="image"
+              height={1000}
+              width={800}
+              placeholder="blur"
+              layout="intrinsic"
+              blurDataURL="/images/blur.jpg"
+              objectFit="cover"
+            />
+          </OverlayImage>
         </Overlay>
       </Body>
     </div>
@@ -52,10 +63,10 @@ export default about;
 const Body = styled.div`
   height: 100vh;
   width: 100vw;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: left; */
   justify-content: space-evenly;
 `;
 
@@ -69,10 +80,11 @@ const VideoContainer = styled.div`
 
 const Overlay = styled.div`
   position: absolute;
+  display: flex;
   text-align: left;
   color: black;
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   justify-content: space-between;
   z-index: 100;
@@ -100,13 +112,14 @@ const OverlayText = styled.div`
     color: black;
     padding-bottom: 20px;
     font-family: "Inter Medium";
-    width: 60%;
+    width: 80%;
   }
 `;
 
-const OverlayImage = styled.div`
-  /* position: absolute;
-  width: 242px;
-  height: 327px;
-  background: url(FRzA_6yX0AI2Z8i.jpg); */
+const OverlayImage = styled.span`
+  & > span {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 20px;
+    object-fit: cover;
+  }
 `;
