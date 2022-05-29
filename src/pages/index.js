@@ -95,7 +95,10 @@ export default function Home() {
         </Dock>
         <BottomOverlay>
           <p>
-            made by <a>@eloka</a>{" "}
+            made by{" "}
+            <Link href="/about">
+              <a>@eloka</a>
+            </Link>{" "}
           </p>
         </BottomOverlay>
       </Body>
