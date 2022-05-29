@@ -167,6 +167,11 @@ const Overlay = styled.div`
     :hover {
       cursor: pointer;
     }
+
+    @media ${device.laptop} {
+      font-weight: bold;
+      letter-spacing: -0.05rem;
+    }
   }
 `;
 
