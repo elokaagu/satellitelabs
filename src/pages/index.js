@@ -95,7 +95,7 @@ export default function Home() {
         </Dock>
         <BottomOverlay>
           <p>
-            made by{" "}
+            crafted by{" "}
             <Link href="/about">
               <a>@eloka</a>
             </Link>{" "}

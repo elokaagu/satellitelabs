@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import Main from "../components/Main";
 import Link from "next/link";
 
 function about(props) {
@@ -32,9 +31,13 @@ function about(props) {
               of Keakie, a streaming service for DJs. He also is an advisor to
               several early stage technology startups, and has interests ranging
               from hardware, philosophy and product through to payments,
-              technology and culture. All of his work is published through
-              Satellite Labs. For consulting, collaboration, speaking or general
-              enquiries - feel free to get in contact via email or dm.
+              technology and culture.
+            </p>
+            <p>
+              {" "}
+              All of his work is published through Satellite Labs. For
+              consulting, collaboration, speaking or general enquiries - feel
+              free to get in contact via email or dm.
             </p>
           </OverlayText>
           <OverlayImage></OverlayImage>
@@ -69,7 +72,7 @@ const Overlay = styled.div`
   text-align: left;
   color: black;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   justify-content: space-between;
   z-index: 100;
@@ -85,7 +88,7 @@ const OverlayText = styled.div`
     color: black;
     padding-bottom: 20px;
 
-    font-family: "Inter Regular";
+    font-family: "Inter Bold";
 
     :hover {
       cursor: pointer;
@@ -96,7 +99,14 @@ const OverlayText = styled.div`
     font-size: 16px;
     color: black;
     padding-bottom: 20px;
+    font-family: "Inter Medium";
+    width: 60%;
   }
 `;
 
-const OverlayImage = styled.img``;
+const OverlayImage = styled.div`
+  /* position: absolute;
+  width: 242px;
+  height: 327px;
+  background: url(FRzA_6yX0AI2Z8i.jpg); */
+`;
