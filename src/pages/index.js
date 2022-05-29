@@ -110,7 +110,7 @@ export default function Home() {
               >
                 @eloka
               </a>
-            </Link>{" "}
+            </Link>
           </p>
         </BottomOverlay>
       </Body>
