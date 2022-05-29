@@ -47,9 +47,10 @@ export default function Home() {
             src={require("../assets/videobg.mp4")}
             autoPlay
             loop
+            playsInline
             muted
             width="100%"
-            height="auto"
+            height="100%"
           />
         </VideoContainer>
         <Overlay>
@@ -243,6 +244,11 @@ const KeakieLogo = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   z-index: 200;
+
+  @media ${device.laptop} {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 const ForwardLink = styled.a`
