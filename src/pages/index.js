@@ -181,6 +181,7 @@ const BottomOverlay = styled.div`
     color: black;
     padding-bottom: 20px;
     font-family: "Inter Regular";
+    text-align: right;
 
     :hover {
       cursor: pointer;
