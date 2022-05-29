@@ -56,18 +56,20 @@ export default function Home() {
         </Overlay>
 
         <Dock>
-          <KeakieLogo>
-            <Link href="https://www.keakie.com/discover">
-              <a target="_blank" rel="noopener noreferrer">
-                <Image
-                  src="/KeakieLogo.png"
-                  alt="image"
-                  height={40}
-                  width={40}
-                />
-              </a>
-            </Link>
-          </KeakieLogo>
+          <KeakieCircle>
+            <KeakieLogo>
+              <Link href="https://www.keakie.com/discover">
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/keakiesquare.png"
+                    alt="image"
+                    height={40}
+                    width={40}
+                  />
+                </a>
+              </Link>
+            </KeakieLogo>
+          </KeakieCircle>
           <KeakieLogo>
             <Link href="https://customuse.com/">
               <a target="_blank" rel="noopener noreferrer">
@@ -97,7 +99,9 @@ export default function Home() {
           <p>
             crafted by{" "}
             <Link href="/about">
-              <a>@eloka</a>
+              <ForwardLink>
+                <a>@eloka</a>
+              </ForwardLink>
             </Link>{" "}
           </p>
         </BottomOverlay>
@@ -220,3 +224,17 @@ const KeakieLogo = styled.div`
   padding-right: 10px;
   z-index: 200;
 `;
+
+const ForwardLink = styled.a`
+  color: black;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  :hover {
+    color: gray;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+`;
+
+const KeakieCircle = styled.div``;

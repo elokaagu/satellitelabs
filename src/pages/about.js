@@ -39,18 +39,34 @@ function about(props) {
               consulting, collaboration, speaking or general enquiries - feel
               free to get in contact via email or dm.
             </p>
+            <Link href="/">
+              <p>Back</p>
+            </Link>
           </OverlayText>
           <OverlayImage>
             <Image
+              // src="/profile3.png"
               src="/profile.png"
               alt="image"
-              height={1000}
-              width={800}
+              height={1200}
+              width={1000}
               placeholder="blur"
               layout="intrinsic"
               blurDataURL="/images/blur.jpg"
               objectFit="cover"
             />
+            {/* <OverlayImageTwo>
+              <Image
+                src="/eloka.jpg"
+                alt="image"
+                height={1200}
+                width={1000}
+                placeholder="blur"
+                layout="intrinsic"
+                blurDataURL="/images/blur.jpg"
+                objectFit="cover"
+              />
+            </OverlayImageTwo> */}
           </OverlayImage>
         </Overlay>
       </Body>
@@ -84,7 +100,7 @@ const Overlay = styled.div`
   text-align: left;
   color: black;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   justify-content: space-between;
   z-index: 100;
@@ -100,7 +116,7 @@ const OverlayText = styled.div`
     color: black;
     padding-bottom: 20px;
 
-    font-family: "Inter Bold";
+    font-family: "Inter Regular";
 
     :hover {
       cursor: pointer;
@@ -119,7 +135,15 @@ const OverlayText = styled.div`
 const OverlayImage = styled.span`
   & > span {
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    border-radius: 20px;
+    border-radius: 10px;
     object-fit: cover;
   }
 `;
+
+// const OverlayImageTwo = styled.span`
+//   & > span {
+//     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+//     border-radius: 10px;
+//     object-fit: cover;
+//   }
+// `;
